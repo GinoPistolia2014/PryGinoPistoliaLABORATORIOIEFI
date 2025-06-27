@@ -49,7 +49,7 @@ namespace PryGinoPistoliaLABORATORIOIEFI.Formularios
 
                     if (userCount > 0)
                     {
-                        MessageBox.Show("El nombre de usuario ya existe. Por favor elija otro.");
+                        MessageBox.Show("El nombre de usuario ya existe.");
                         return;
                     }
 
