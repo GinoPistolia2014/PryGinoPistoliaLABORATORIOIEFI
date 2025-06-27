@@ -166,7 +166,7 @@
     <Compile Include="BasedeDatos\Conexion.cs" />
     <Compile Include="Clases\Auditorias.cs" />
     <Compile Include="Clases\Usuarios.cs" />
-    <Compile Include="Clases\ValidarUsuario.cs" />
+    <Compile Include="Clases\ValidarDatosUsuario.cs" />
     <Compile Include="Formularios\FormAuditorias.cs">
       <SubType>Form</SubType>
     </Compile>

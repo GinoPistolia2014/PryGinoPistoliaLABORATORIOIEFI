@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace PryGinoPistoliaLABORATORIOIEFI.Clases
 {
-    internal class ValidarUsuario
+    internal class ValidarDatosUsuario
     {
-        public string NombreUsuario { get; set; }
+        public string Usuarios { get; set; }
         public string Contraseña { get; set; }
 
         public bool Completada { get; set; }
 
-        public ValidarUsuario(string NombreUsuario, string Contraseña)
+        public ValidarDatosUsuario(string NombreUsuario, string Contraseña)
         {
 
-            this.NombreUsuario = NombreUsuario;
+            this.Usuarios = Usuarios;
             this.Contraseña = Contraseña;
             this.Completada = false;
 

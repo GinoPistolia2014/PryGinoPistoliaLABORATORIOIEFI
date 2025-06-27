@@ -15,7 +15,7 @@ namespace PryGinoPistoliaLABORATORIOIEFI.Formularios
     public partial class FormAuditorias : Form
     {
         public string connectionString = "Server=localhost\\SQLEXPRESS02;Database=Administracion;Trusted_Connection=True";
-        Conexion conexion = new Conexion( );
+        public Conexion conexion = new Conexion( );
 
 
         public FormAuditorias()

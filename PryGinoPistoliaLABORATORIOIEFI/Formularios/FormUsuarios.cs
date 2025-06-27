@@ -1,4 +1,5 @@
-﻿using PryGinoPistoliaLABORATORIOIEFI.Clases;
+﻿using PryGinoPistoliaLABORATORIOIEFI.BasedeDatos;
+using PryGinoPistoliaLABORATORIOIEFI.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,11 +16,8 @@ namespace PryGinoPistoliaLABORATORIOIEFI.Formularios
     public partial class FormUsuarios : Form
     {
         public string connectionString = "Server=localhost\\SQLEXPRESS02;Database=Administracion;Trusted_Connection=True";
-        Conexion conexion = new Conexion();
-        Usuarios usuarios = new Usuarios();
-        public class Conexion
-        {
-        }
+        public Conexion conexion = new Conexion();
+        
 
         public FormUsuarios()
         {
@@ -158,25 +156,25 @@ namespace PryGinoPistoliaLABORATORIOIEFI.Formularios
             // devuelve la lista completa
             return lista;
         }
-        //public bool ValidarUsuario(string NombreUsuario, string Contraseña)
-        //{
-        //    try
-        //    {
-        //        foreach (DataRow fila in DataSet.DataTable["Usuarios"].Rows)
-        //        {
-        //            if (fila["Usuario"].ToString() == NombreUsuario && fila["Contraseña"].ToString() == Contraseña)
-        //            {
-        //                return true; // Usuario válido
-        //            }
-        //        }
-        //        return false; // No se encontró coincidencia
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Error al validar usuario: " + ex.Message);
-        //        return false;
-        //    }
-        //}
+        public bool ValidarDatosUsuario(string NombreUsuario, string Contraseña)
+        {
+            try
+            {
+                foreach (DataRow fila in DataSet.DataTable["Usuarios"].Rows)
+                {
+                    if (fila["Usuario"].ToString() == NombreUsuario && fila["Contraseña"].ToString() == Contraseña)
+                    {
+                        return true; // Usuario válido
+                    }
+                }
+                return false; // No se encontró coincidencia
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al validar usuario: " + ex.Message);
+                return false;
+            }
+        }
     }
 
 }
