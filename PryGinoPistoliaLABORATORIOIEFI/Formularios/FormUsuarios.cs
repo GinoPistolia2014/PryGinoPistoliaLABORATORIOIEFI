@@ -30,7 +30,7 @@ namespace PryGinoPistoliaLABORATORIOIEFI.Formularios
 
         private void FormUsuarios_Load(object sender, EventArgs e)
         {
-            //conexion.Conectar(dgvUsuarios);
+            conexion.Conectar(dgvUsuarios);
             
 
 
